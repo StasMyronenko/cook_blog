@@ -407,6 +407,13 @@ ol {
 	padding: 10px 0;
 }
 
+.dropdown .dropdown__menu li .children {
+	position: static;
+    margin-left: 10px;
+    width: 170px;
+    padding: 0;
+}
+
 .header__menu ul li .dropdown__menu li {
 	display: block;
 	margin-right: 0;

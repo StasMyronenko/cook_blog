@@ -23,5 +23,3 @@ class HomeView(ListView):
     model = Post
     paginate_by = 8
     template_name = "blog/home.html"
-
-# Create your views here.
