@@ -18,9 +18,10 @@ class PostDetailView(DetailView):
     context_object_name = 'post'
     slug_url_kwarg = 'post_slug'
 
+
 class HomeView(ListView):
     model = Post
-    paginate_by = 6
+    paginate_by = 8
     template_name = "blog/home.html"
 
 # Create your views here.
