@@ -3,3 +3,4 @@ venv
 !*media/.gitkeep
 media/*
 static/ckeditor
+__pycache__
