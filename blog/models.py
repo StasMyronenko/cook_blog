@@ -25,8 +25,17 @@ class Tag(models.Model):
         return self.name
 
 
+class Author(models.Model):
+    name = models.CharField(max_length=50)
+    about = RichTextField()
+    image = models.ImageField(upload_to='authors')
+
+    def __str__(self):
+        return self.name
+
+
 class Post(models.Model):
-    author = models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE)
+    author = models.ForeignKey(Author, related_name='posts', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     image = models.ImageField(upload_to='articles/')  # В деректории медиа создаём артиклс и там сохраняем
     text = models.TextField()

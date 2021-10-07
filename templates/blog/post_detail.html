@@ -108,13 +108,10 @@
                     </div>
                     <div class="single-post__author__profile">
                         <div class="single-post__author__profile__pic">
-                            <img src="{{  }}" alt="">
+                            <img src="{{ post.author.image.url }}" alt="">
                         </div>
                         <div class="single-post__author__profile__text">
-                            <h4>Lena Mollein.</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            {{ post.author.about|safe }}
                             <div class="single-post__author__profile__social">
                             {% for item in social_links %}
                                 <a href="{{ item.link }}"><i class="fa {{ item.icon }}"></i></a>
