@@ -1,0 +1,19 @@
+{% load mptt_tags menu_tags %}
+<ul>
+    {% get_list_categories as list_category %}
+    {% for node in list_category %}
+        <li><a href="{% url 'post_list' node.slug %}">{{ node.name }}</a></li>
+
+    {% endfor %}
+
+</ul>
+
+
+{#        <li><a href="#">Recipes <span>128</span></a></li>#}
+{#        <li><a href="#">Dinner <span>32</span></a></li>#}
+{#        <li><a href="#">Dessert <span>86</span></a></li>#}
+{##}
+{#        <li class="p-left"><a href="#">Drinks <span>36</span></a></li>#}
+{#        <li class="p-left"><a href="#">Cakes <span>15</span></a></li>#}
+{#        <li><a href="#">Vegan <span>63</span></a></li>#}
+{#        <li><a href="#">Weightloss <span>27</span></a></li>#}
