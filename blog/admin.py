@@ -27,6 +27,7 @@ class RecipeAdmin(admin.ModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'website', 'create_at', 'id']
 
+
 admin.site.register(models.Category, MPTTModelAdmin)
 admin.site.register(models.Tag)
 admin.site.register(models.Post, PostAdmin)
